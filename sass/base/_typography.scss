@@ -1,0 +1,81 @@
+body {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+.heading-primary {
+  color: $color-white;
+
+  &--main {
+    display: block;
+    font-size: 10rem;
+    font-weight: 400;
+    letter-spacing: 2.5rem;
+    animation: moveinright 2s;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+  }
+
+  &--sub {
+    display: block;
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: 1.7rem;
+    animation: moveinleft 2s;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 6.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.5s;
+
+  @include respond(tab-port) {
+    letter-spacing: 3rem;
+  }
+  @include respond(phone) {
+    letter-spacing: 2.5rem;
+  }
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pargraph {
+  font-size: $default-font-size;
+}
